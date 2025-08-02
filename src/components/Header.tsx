@@ -22,7 +22,7 @@ const Header = () => {
             <img 
               src="/lovable-uploads/062837f1-0934-42eb-b50d-4920a2fe049f.png" 
               alt="HIDROSPHERA Consultoria Ambiental Logo" 
-              className="h-12 w-auto"
+              className="h-16 w-auto"
             />
           </div>
 
