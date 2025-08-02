@@ -20,8 +20,8 @@ const Header = () => {
           {/* Logo */}
           <div className="flex items-center">
             <img 
-              src="/lovable-uploads/08ea1e2b-5e3b-4354-a67f-a340be11a525.png" 
-              alt="HIDROSPHERA Logo" 
+              src="/lovable-uploads/062837f1-0934-42eb-b50d-4920a2fe049f.png" 
+              alt="HIDROSPHERA Consultoria Ambiental Logo" 
               className="h-12 w-auto"
             />
           </div>
