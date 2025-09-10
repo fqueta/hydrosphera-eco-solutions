@@ -27,7 +27,7 @@ const About = () => {
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
               Sobre a <span className="text-primary">HIDROSPHERA</span>
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">Somos uma empresa mo mercado deste 2001, especializada em oferecer suporte completo às diversas áreas do meio ambiente, desenvolvendo soluções inovadoras e sustentáveis para um futuro melhor.</p>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">Somos uma empresa no mercado deste 2001, especializada em oferecer suporte completo às diversas áreas do meio ambiente, desenvolvendo soluções inovadoras e sustentáveis para um futuro melhor.</p>
           </div>
 
           {/* Content Grid */}
@@ -49,6 +49,22 @@ const About = () => {
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">Fornecer estudos ambientais eficientes e econômicos que contribuam para a preservação do meio ambiente e o desenvolvimento sustentável. </p>
               </div>
+              <div  className="space-y-4">
+                <h3 className="text-2xl font-semibold text-foreground">
+                  Valores
+                </h3>
+                <ul>
+                    <li><small>Determinação;</small></li>
+                    <li><small>Companheirismo;</small></li>
+                    <li><small>Organização;</small></li>
+                    <li><small>Profissionalismo;</small></li>
+                    <li><small>Dinamismo;</small></li>
+                    <li><small>Respeito;</small></li>
+                    <li><small>Comunicação;</small></li>
+                    <li><small>Humildade.</small></li>
+                </ul>
+            </div>
+              
 
               <Button variant="default" size="lg" className="mt-6">
                 Conheça Nossa História
