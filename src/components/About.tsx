@@ -5,7 +5,7 @@ const About = () => {
   const features = [{
     icon: Award,
     title: 'Excelência',
-    description: 'Mais de 15 anos de experiência em soluções ambientais sustentáveis'
+    description: 'Mais de 24 anos de experiência em soluções ambientais sustentáveis'
   }, {
     icon: Users,
     title: 'Equipe Especializada',
@@ -94,21 +94,21 @@ const About = () => {
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div className="space-y-2">
-              <div className="text-3xl md:text-4xl font-bold text-primary">500+</div>
+              <div className="text-3xl md:text-4xl font-bold text-primary">100+</div>
               <div className="text-muted-foreground">Projetos Realizados</div>
             </div>
             <div className="space-y-2">
-              <div className="text-3xl md:text-4xl font-bold text-primary">15+</div>
+              <div className="text-3xl md:text-4xl font-bold text-primary">24+</div>
               <div className="text-muted-foreground">Anos de Experiência</div>
             </div>
             <div className="space-y-2">
               <div className="text-3xl md:text-4xl font-bold text-primary">100+</div>
               <div className="text-muted-foreground">Clientes Satisfeitos</div>
             </div>
-            <div className="space-y-2">
+            {/* <div className="space-y-2">
               <div className="text-3xl md:text-4xl font-bold text-primary">50+</div>
               <div className="text-muted-foreground">Especialistas</div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
