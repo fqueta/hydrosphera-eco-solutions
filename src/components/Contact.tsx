@@ -17,22 +17,27 @@ const Contact = () => {
     {
       icon: MapPin,
       title: 'Endereço',
-      details: ['Av. das Águas, 1234', 'Centro - São Paulo/SP', 'CEP: 01234-567']
+      details: ['Rua Manoel vilar, 13 Loja 4', 'Democrata - Juiz de Fora/MG', 'CEP: 36035-240']
     },
     {
       icon: Phone,
       title: 'Telefone',
-      details: ['(11) 9999-8888', '(11) 3333-4444', 'WhatsApp: (11) 9999-8888']
+      details: ['(32) 98411-1197', '(11) 3333-4444', 'WhatsApp: (11) 9999-8888']
+    },
+    {
+      icon: Users,
+      title: 'Profissionais',
+      details: ['(32) 98411-1197', '(11) 3333-4444', 'WhatsApp: (11) 9999-8888']
     },
     {
       icon: Mail,
       title: 'E-mail',
-      details: ['contato@hidrosphera.com.br', 'comercial@hidrosphera.com.br', 'projetos@hidrosphera.com.br']
+      details: ['hidrosphera@gmail.com.br']
     },
     {
       icon: Clock,
       title: 'Horário',
-      details: ['Segunda à Sexta: 8h às 18h', 'Sábado: 8h às 12h', 'Plantão 24h para emergências']
+      details: ['Segunda à Quinta: 8h às 18h', 'Sexta: 8h às 17h', 'Plantão 24h para emergências']
     }
   ];
 
