@@ -52,20 +52,18 @@ const About = () => {
                 </p>
               </div>
               <div  className="space-y-4">
-                <h3 className="text-2xl font-semibold text-foreground">
-                  Valores
-                </h3>
-                <ul>
-                    <li><small>Determinação;</small></li>
-                    <li><small>Companheirismo;</small></li>
-                    <li><small>Organização;</small></li>
-                    <li><small>Profissionalismo;</small></li>
-                    <li><small>Dinamismo;</small></li>
-                    <li><small>Respeito;</small></li>
-                    <li><small>Comunicação;</small></li>
-                    <li><small>Humildade.</small></li>
+                <h3 className="text-2xl font-semibold text-foreground">Visão:</h3>
+                <ul className="list-disc">
+                    <li>Determinação</li>
+                    <li>Companheirismo</li>
+                    <li>Organização</li>
+                    <li>Profissionalismo</li>
+                    <li>Dinamismo</li>
+                    <li>Respeito</li>
+                    <li>Comunicação</li>
+                    <li>Humildade</li>
                 </ul>
-            </div>
+              </div>
               
 
               <Button variant="default" size="lg" className="mt-6">
