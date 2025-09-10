@@ -49,11 +49,7 @@ const About = () => {
                 <h3 className="text-2xl font-semibold text-foreground">
                   Nossa Visão
                 </h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  Ser reconhecida como referência nacional em soluções ambientais inovadoras, 
-                  contribuindo ativamente para um planeta mais sustentável e equilibrado para 
-                  as futuras gerações.
-                </p>
+                <p className="text-muted-foreground leading-relaxed">Fornecer estudos ambientais eficientes e econômicos que contribuam para a preservação do meio ambiente e o desenvolvimento sustentável. </p>
               </div>
 
               <Button variant="default" size="lg" className="mt-6">
