@@ -9,7 +9,8 @@ import {
   Mail, 
   Clock,
   Send,
-  MessageSquare
+  MessageSquare,
+  Users
 } from 'lucide-react';
 
 const Contact = () => {
