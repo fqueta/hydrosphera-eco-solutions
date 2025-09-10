@@ -1,33 +1,25 @@
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Award, Users, Target, Lightbulb } from 'lucide-react';
-
 const About = () => {
-  const features = [
-    {
-      icon: Award,
-      title: 'Excelência',
-      description: 'Mais de 15 anos de experiência em soluções ambientais sustentáveis'
-    },
-    {
-      icon: Users,
-      title: 'Equipe Especializada',
-      description: 'Profissionais qualificados em diversas áreas ambientais'
-    },
-    {
-      icon: Target,
-      title: 'Resultados Eficientes',
-      description: 'Projetos econômicos e de alta performance para nossos clientes'
-    },
-    {
-      icon: Lightbulb,
-      title: 'Inovação',
-      description: 'Soluções tecnológicas avançadas para desafios ambientais'
-    }
-  ];
-
-  return (
-    <section id="about" className="py-20 bg-accent/50">
+  const features = [{
+    icon: Award,
+    title: 'Excelência',
+    description: 'Mais de 15 anos de experiência em soluções ambientais sustentáveis'
+  }, {
+    icon: Users,
+    title: 'Equipe Especializada',
+    description: 'Profissionais qualificados em diversas áreas ambientais'
+  }, {
+    icon: Target,
+    title: 'Resultados Eficientes',
+    description: 'Projetos econômicos e de alta performance para nossos clientes'
+  }, {
+    icon: Lightbulb,
+    title: 'Inovação',
+    description: 'Soluções tecnológicas avançadas para desafios ambientais'
+  }];
+  return <section id="about" className="py-20 bg-accent/50">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
@@ -35,10 +27,7 @@ const About = () => {
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
               Sobre a <span className="text-primary">HIDROSPHERA</span>
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Somos uma empresa especializada em oferecer suporte completo às diversas áreas do meio ambiente, 
-              desenvolvendo soluções inovadoras e sustentáveis para um futuro melhor.
-            </p>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">Somos uma empresa mo mercado deste 2001, especializada em oferecer suporte completo às diversas áreas do meio ambiente, desenvolvendo soluções inovadoras e sustentáveis para um futuro melhor.</p>
           </div>
 
           {/* Content Grid */}
@@ -74,8 +63,7 @@ const About = () => {
 
             {/* Right Content - Features Grid */}
             <div className="grid sm:grid-cols-2 gap-6">
-              {features.map((feature, index) => (
-                <Card key={index} className="group hover:shadow-card transition-all duration-300 hover:-translate-y-2">
+              {features.map((feature, index) => <Card key={index} className="group hover:shadow-card transition-all duration-300 hover:-translate-y-2">
                   <CardContent className="p-6 text-center">
                     <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                       <feature.icon className="w-8 h-8 text-primary-foreground" />
@@ -87,8 +75,7 @@ const About = () => {
                       {feature.description}
                     </p>
                   </CardContent>
-                </Card>
-              ))}
+                </Card>)}
             </div>
           </div>
 
@@ -113,8 +100,6 @@ const About = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default About;
