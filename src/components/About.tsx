@@ -45,7 +45,7 @@ const About = () => {
 
               <div className="space-y-4">
                 <h3 className="text-2xl font-semibold text-foreground">
-                  Nossa Visão
+                  Visão
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">Fornecer estudos ambientais eficientes e econômicos que contribuam para a preservação do meio ambiente e o desenvolvimento sustentável. </p>
               </div>
