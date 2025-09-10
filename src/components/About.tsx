@@ -35,9 +35,7 @@ const About = () => {
             {/* Left Content */}
             <div className="space-y-6">
               <div className="space-y-4">
-                <h3 className="text-2xl font-semibold text-foreground">
-                  Nossa Missão
-                </h3>
+                <h3 className="text-2xl font-semibold text-foreground">Missão</h3>
                 <p className="text-muted-foreground leading-relaxed">
                   Fornecer soluções ambientais eficientes e econômicas que contribuam para a preservação 
                   do meio ambiente e o desenvolvimento sustentável. Trabalhamos com tecnologias avançadas 
