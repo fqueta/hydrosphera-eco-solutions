@@ -51,9 +51,9 @@ const About = () => {
                   Ser reconhecida como referência  em soluções ambientais inovadoras, contribuindo ativamente para um planeta mais sustentável e equilibrado para as futuras gerações. 
                 </p>
               </div>
-              <div  className="space-y-4">
-                <h3 className="text-2xl font-semibold text-foreground">Visão:</h3>
-                <ul className="list-disc">
+              <div className="space-y-4">
+                <h3 className="text-2xl font-semibold text-foreground">Valores</h3>
+                <ul className="list-disc list-inside space-y-1 text-muted-foreground">
                     <li>Determinação</li>
                     <li>Companheirismo</li>
                     <li>Organização</li>
@@ -90,7 +90,7 @@ const About = () => {
           </div>
 
           {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+          <div className="grid grid-cols-3 gap-8 text-center">
             <div className="space-y-2">
               <div className="text-3xl md:text-4xl font-bold text-primary">100+</div>
               <div className="text-muted-foreground">Projetos Realizados</div>
@@ -103,10 +103,6 @@ const About = () => {
               <div className="text-3xl md:text-4xl font-bold text-primary">100+</div>
               <div className="text-muted-foreground">Clientes Satisfeitos</div>
             </div>
-            {/* <div className="space-y-2">
-              <div className="text-3xl md:text-4xl font-bold text-primary">50+</div>
-              <div className="text-muted-foreground">Especialistas</div>
-            </div> */}
           </div>
         </div>
       </div>
