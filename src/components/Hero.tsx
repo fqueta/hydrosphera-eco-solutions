@@ -30,7 +30,7 @@ const Hero = () => {
           </div>
 
           <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fadeIn">
-            HIDROS<span className="text-primary-glow">PHERA</span>
+            <span className="text-primary-glow">HIDROS</span><span className="text-secondary">PHERA</span>
           </h1>
           
           <p className="text-xl md:text-2xl mb-8 opacity-90 animate-fadeIn" style={{ animationDelay: '0.3s' }}>
