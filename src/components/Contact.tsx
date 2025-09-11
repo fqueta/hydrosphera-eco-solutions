@@ -1,18 +1,79 @@
+import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
+import { useToast } from '@/hooks/use-toast';
 import { 
   MapPin, 
   Phone, 
   Mail, 
   Clock,
   Send,
-  MessageSquare
+  MessageSquare,
+  Loader2
 } from 'lucide-react';
 
 const Contact = () => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [formData, setFormData] = useState({
+    name: '',
+    company: '',
+    email: '',
+    phone: '',
+    subject: '',
+    message: ''
+  });
+  const { toast } = useToast();
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { id, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [id]: value
+    }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch('https://preview--hydrosphera-eco-solutions.lovable.app/', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData)
+      });
+
+      if (response.ok) {
+        toast({
+          title: "Mensagem enviada!",
+          description: "Entraremos em contato em até 24 horas.",
+        });
+        setFormData({
+          name: '',
+          company: '',
+          email: '',
+          phone: '',
+          subject: '',
+          message: ''
+        });
+      } else {
+        throw new Error('Falha no envio');
+      }
+    } catch (error) {
+      toast({
+        title: "Erro ao enviar mensagem",
+        description: "Tente novamente ou entre em contato pelo telefone.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
   const contactInfo = [
     {
       icon: MapPin,
@@ -141,51 +202,95 @@ const Contact = () => {
                   Preencha o formulário abaixo e entraremos em contato em até 24 horas.
                 </p>
               </CardHeader>
-              <CardContent className="space-y-6">
-                <div className="grid sm:grid-cols-2 gap-4">
-                  <div className="space-y-2">
-                    <Label htmlFor="name">Nome Completo</Label>
-                    <Input id="name" placeholder="Seu nome completo" />
+              <CardContent>
+                <form onSubmit={handleSubmit} className="space-y-6">
+                  <div className="grid sm:grid-cols-2 gap-4">
+                    <div className="space-y-2">
+                      <Label htmlFor="name">Nome Completo</Label>
+                      <Input 
+                        id="name" 
+                        placeholder="Seu nome completo" 
+                        value={formData.name}
+                        onChange={handleInputChange}
+                        required
+                      />
+                    </div>
+                    <div className="space-y-2">
+                      <Label htmlFor="company">Empresa</Label>
+                      <Input 
+                        id="company" 
+                        placeholder="Nome da empresa" 
+                        value={formData.company}
+                        onChange={handleInputChange}
+                      />
+                    </div>
                   </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="company">Empresa</Label>
-                    <Input id="company" placeholder="Nome da empresa" />
+
+                  <div className="grid sm:grid-cols-2 gap-4">
+                    <div className="space-y-2">
+                      <Label htmlFor="email">E-mail</Label>
+                      <Input 
+                        id="email" 
+                        type="email" 
+                        placeholder="seu@email.com" 
+                        value={formData.email}
+                        onChange={handleInputChange}
+                        required
+                      />
+                    </div>
+                    <div className="space-y-2">
+                      <Label htmlFor="phone">Telefone</Label>
+                      <Input 
+                        id="phone" 
+                        placeholder="(11) 99999-9999" 
+                        value={formData.phone}
+                        onChange={handleInputChange}
+                      />
+                    </div>
                   </div>
-                </div>
 
-                <div className="grid sm:grid-cols-2 gap-4">
                   <div className="space-y-2">
-                    <Label htmlFor="email">E-mail</Label>
-                    <Input id="email" type="email" placeholder="seu@email.com" />
+                    <Label htmlFor="subject">Assunto</Label>
+                    <Input 
+                      id="subject" 
+                      placeholder="Como podemos ajudar?" 
+                      value={formData.subject}
+                      onChange={handleInputChange}
+                      required
+                    />
                   </div>
+
                   <div className="space-y-2">
-                    <Label htmlFor="phone">Telefone</Label>
-                    <Input id="phone" placeholder="(11) 99999-9999" />
+                    <Label htmlFor="message">Mensagem</Label>
+                    <Textarea 
+                      id="message" 
+                      placeholder="Descreva seu projeto ou necessidade..." 
+                      rows={4}
+                      value={formData.message}
+                      onChange={handleInputChange}
+                      required
+                    />
                   </div>
-                </div>
 
-                <div className="space-y-2">
-                  <Label htmlFor="subject">Assunto</Label>
-                  <Input id="subject" placeholder="Como podemos ajudar?" />
-                </div>
+                  <Button 
+                    type="submit" 
+                    variant="hero" 
+                    size="lg" 
+                    className="w-full" 
+                    disabled={isSubmitting}
+                  >
+                    {isSubmitting ? (
+                      <Loader2 className="mr-2 w-5 h-5 animate-spin" />
+                    ) : (
+                      <Send className="mr-2 w-5 h-5" />
+                    )}
+                    {isSubmitting ? 'Enviando...' : 'Enviar Mensagem'}
+                  </Button>
 
-                <div className="space-y-2">
-                  <Label htmlFor="message">Mensagem</Label>
-                  <Textarea 
-                    id="message" 
-                    placeholder="Descreva seu projeto ou necessidade..." 
-                    rows={4}
-                  />
-                </div>
-
-                <Button variant="hero" size="lg" className="w-full">
-                  <Send className="mr-2 w-5 h-5" />
-                  Enviar Mensagem
-                </Button>
-
-                <p className="text-xs text-muted-foreground text-center">
-                  Ao enviar este formulário, você concorda com nossa política de privacidade.
-                </p>
+                  <p className="text-xs text-muted-foreground text-center">
+                    Ao enviar este formulário, você concorda com nossa política de privacidade.
+                  </p>
+                </form>
               </CardContent>
             </Card>
           </div>
