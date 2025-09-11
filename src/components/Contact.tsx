@@ -40,7 +40,7 @@ const Contact = () => {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch('https://preview--hydrosphera-eco-solutions.lovable.app/', {
+      const response = await fetch('https://n8n.maisaqui.com.br/webhook-test/5d0d3232-396d-4cfc-812c-8bc0b1de936c', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
