@@ -38,7 +38,7 @@ const Hero = () => {
           </p>
 
           <p className="text-lg md:text-xl mb-10 opacity-80 max-w-3xl mx-auto animate-fadeIn" style={{ animationDelay: '0.6s' }}>
-            Especialistas em suporte às diversas áreas do meio ambiente, oferecemos excelentes soluções 
+            Fundada em 2001, com Especialistas em suporte nas diversas áreas do meio ambiente, oferecemos excelentes soluções 
             para necessidades ambientais com projetos eficientes e econômicos.
           </p>
 
