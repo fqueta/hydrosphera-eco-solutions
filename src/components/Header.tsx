@@ -9,7 +9,7 @@ const Header = () => {
     { label: 'Início', href: '#home' },
     { label: 'Sobre', href: '#about' },
     { label: 'Serviços', href: '#services' },
-    { label: 'Projetos', href: '#projects' },
+    { label: 'Portfolio', href: '#Portfolio' },
     { label: 'Contato', href: '#contact' },
   ];
 
